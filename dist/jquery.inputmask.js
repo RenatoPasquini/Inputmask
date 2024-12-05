@@ -2078,7 +2078,7 @@
                             if (!0 === t.keepStatic) {
                                 var a = e.match(new RegExp("(?<p1>.)\\[(?<p2>[^\\]]*)\\]", "g"));
                                 a && a.forEach((function(t, i) {
-                                    var a = t.split("["), n = a[0], r = a[1].replace("]", "");
+                                    var a = t.split("["), n = a[0], r = a[1].replace(/\]/g, "");
                                     e = e.replace(new RegExp("".concat((0, o.default)(n), "\\[").concat((0, o.default)(r), "\\]")), n.charAt(0) === r.charAt(0) ? "(".concat(n, "|").concat(n).concat(r, ")") : "".concat(n, "[").concat(r, "]"));
                                 }));
                             }
