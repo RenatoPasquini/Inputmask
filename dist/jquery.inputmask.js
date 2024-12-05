@@ -2688,7 +2688,7 @@
                                         throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
                                     }();
                                 }(t.split("["), 2), r = i[0], o = i[1];
-                                o = o.replace("]", ""), e = e.replace(new RegExp("".concat((0, a.escapeRegex)(r), "\\[").concat((0, 
+                                o = o.replace(/\]/g, ""), e = e.replace(new RegExp("".concat((0, a.escapeRegex)(r), "\\[").concat((0, 
                                 a.escapeRegex)(o), "\\]")), r.charAt(0) === o.charAt(0) ? "(".concat(r, "|").concat(r).concat(o, ")") : "".concat(r, "[").concat(o, "]"));
                             }));
                         }
